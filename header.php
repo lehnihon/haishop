@@ -39,38 +39,48 @@
 <div id="wrapper" class="hfeed site">
 
 	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'quark' ); ?>"><?php esc_html_e( 'Skip to main content', 'quark' ); ?></a></div>
-
+	<div id="site-socialmedia">
+		<div class="site-header row">
+			<div class="col grid_12_of_12">
+				<ul class="redes_sociais_header">
+					<li><a target="_blank" href="#">Sobre a Hai Shop</a></li>
+					<li><a target="_blank" href="#">Minha Conta</a></li>
+					<li><a target="_blank" href="#">Cadastre-se</a></li>
+					<li><a target="_blank" href="#">Atendimento</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<div id="headercontainer">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="row">
+				<div class="col grid_3_of_12">
+					<h1>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
+							<img class="efeito-cinza" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/logo_haishop.png"; ?>" alt="" />
+						</a>
+					</h1>
+				</div> <!-- /.col.grid_5_of_12 -->
 
-		<header id="masthead" class="site-header row" role="banner">
-			<div class="col grid_5_of_12 site-title">
-				<h1>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
-						<?php 
-						$headerImg = get_header_image();
-						if( !empty( $headerImg ) ) { ?>
-							<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-						<?php } 
-						else {
-							echo get_bloginfo( 'name' );
-						} ?>
-					</a>
-				</h1>
-			</div> <!-- /.col.grid_5_of_12 -->
+				<div class="col grid_9_of_12">
+					<br>
+					<?php get_search_form(); ?>
+				</div> <!-- /.col.grid_7_of_12 -->
+			</div>
+		</header> <!-- /#masthead.site-header.row -->
 
-			<div class="col grid_7_of_12">
-				<div class="social-media-icons">
-					<?php echo quark_get_social_media(); ?>
-				</div>
+	</div> <!-- /#headercontainer -->
+	<div id="menucontainer">
+		<div class="row site-header">
+			<div class="col grid_12_of_12">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'quark' ); ?></h3>
 					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'quark' ); ?>"><?php esc_html_e( 'Skip to content', 'quark' ); ?></a></div>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav> <!-- /.site-navigation.main-navigation -->
-			</div> <!-- /.col.grid_7_of_12 -->
-		</header> <!-- /#masthead.site-header.row -->
-
-	</div> <!-- /#headercontainer -->
+			</div>
+		</div>
+	</div>
 	<div id="bannercontainer">
 		<div class="banner row">
 			<?php if ( is_front_page() ) {
