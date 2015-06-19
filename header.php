@@ -62,10 +62,13 @@
 					</h1>
 				</div> <!-- /.col.grid_5_of_12 -->
 
-				<div class="col grid_9_of_12">
+				<div class="col grid_6_of_12">
 					<br>
 					<?php get_search_form(); ?>
 				</div> <!-- /.col.grid_7_of_12 -->
+				<div class="col grid_3_of_12"><br>
+					<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?> </a>
+				</div>
 			</div>
 		</header> <!-- /#masthead.site-header.row -->
 
