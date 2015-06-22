@@ -1,326 +1,93 @@
 <?php
 /**
- * The main template file.
+ * The Template for displaying product archives, including the main shop page which is a post type archive.
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Override this template by copying it to yourtheme/woocommerce/archive-product.php
  *
- * @package Quark
- * @since Quark 1.0
+ * @author 		WooThemes
+ * @package 	WooCommerce/Templates
+ * @version     2.0.0
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 get_header( 'shop' ); ?>
 
-	<div id="primary" class="woocommerce woocommerce-page home-products" role="main">
-		<div id="bannercontainer" class="row">
-			<div class="col grid_12_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=28]"); 
-				?>	
-			</div>			
-		</div> <!-- /#bannercontainer -->
-		<div class="row">
-			<div class="col grid_4_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=30]"); 
-				?>
-			</div>
-			<div class="col grid_4_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=31]"); 
-				?>
-			</div>
-			<div class="col grid_4_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=32]"); 
-				?>
-			</div>
-		</div>
-		<div class="row">
-			<ul class="products col grid_12_of_12" style="text-align:center; margin:0">
-				<h4>Produtos para simplificar sua vida</h4>
-			    <?php
+	<?php
+		/**
+		 * woocommerce_before_main_content hook
+		 *
+		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+		 * @hooked woocommerce_breadcrumb - 20
+		 */
+		do_action( 'woocommerce_before_main_content' );
+	?>
 
-			        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
-			        $loop = new WP_Query( $args );
+		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
+			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
 
-			        		<?php
-							// Store loop count we're currently on
-							if ( empty( $woocommerce_loop['loop'] ) ) {
-								$woocommerce_loop['loop'] = 0;
-							}
+		<?php endif; ?>
 
-							// Store column count for displaying the grid
-							if ( empty( $woocommerce_loop['columns'] ) ) {
-								$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
-							}
+		<?php do_action( 'woocommerce_archive_description' ); ?>
 
-							// Ensure visibility
-							if ( ! $product || ! $product->is_visible() ) {
-								return;
-							}
+		<?php if ( have_posts() ) : ?>
 
-							// Increase loop count
-							$woocommerce_loop['loop']++;
+			<?php
+				/**
+				 * woocommerce_before_shop_loop hook
+				 *
+				 * @hooked woocommerce_result_count - 20
+				 * @hooked woocommerce_catalog_ordering - 30
+				 */
+				do_action( 'woocommerce_before_shop_loop' );
+			?>
 
-							// Extra post classes
-							$classes = array();
-							if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ) {
-								$classes[] = 'first';
-							}
-							if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
-								$classes[] = 'last';
-							}
-			        		?>
+			<?php woocommerce_product_loop_start(); ?>
 
-			                <li <?php post_class( $classes ); ?>>    
-			                	<h3><?php the_title(); ?></h3>
-			                    <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-			                    	
-			                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
-			                        <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?>
+				<?php woocommerce_product_subcategories(); ?>
 
-			                        
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			                        <span class="price"><?php echo $product->get_price_html(); ?></span>                    
+					<?php wc_get_template_part( 'content', 'product' ); ?>
 
-			                    </a>
+				<?php endwhile; // end of the loop. ?>
 
-			                    <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+			<?php woocommerce_product_loop_end(); ?>
 
-			                </li>
+			<?php
+				/**
+				 * woocommerce_after_shop_loop hook
+				 *
+				 * @hooked woocommerce_pagination - 10
+				 */
+				do_action( 'woocommerce_after_shop_loop' );
+			?>
 
-			    <?php endwhile; ?>
-			    <?php wp_reset_query(); ?>
-			</ul><!--/.products-->
-		</div> <!-- /.col.grid_12_of_12 -->
-		<div class="row">
-			<div class="col grid_6_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=34]"); 
-				?>
-			</div>
-			<div class="col grid_6_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=36]"); 
-				?>
-			</div>
-		</div>
-		<div class="row">
-			<ul class="products col grid_12_of_12" style="text-align:center; margin:0">
-				<h4>Painel Automotivo</h4>
-			    <?php
+		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 
-			        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
-			        $loop = new WP_Query( $args );
+			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
-			        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
+		<?php endif; ?>
 
-			        		<?php
-							// Store loop count we're currently on
-							if ( empty( $woocommerce_loop['loop'] ) ) {
-								$woocommerce_loop['loop'] = 0;
-							}
+	<?php
+		/**
+		 * woocommerce_after_main_content hook
+		 *
+		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+		 */
+		do_action( 'woocommerce_after_main_content' );
+	?>
 
-							// Store column count for displaying the grid
-							if ( empty( $woocommerce_loop['columns'] ) ) {
-								$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
-							}
+	<?php
+		/**
+		 * woocommerce_sidebar hook
+		 *
+		 * @hooked woocommerce_get_sidebar - 10
+		 */
+		//do_action( 'woocommerce_sidebar' );
+	?>
 
-							// Ensure visibility
-							if ( ! $product || ! $product->is_visible() ) {
-								return;
-							}
-
-							// Increase loop count
-							$woocommerce_loop['loop']++;
-
-							// Extra post classes
-							$classes = array();
-							if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ) {
-								$classes[] = 'first';
-							}
-							if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
-								$classes[] = 'last';
-							}
-			        		?>
-
-			                <li <?php post_class( $classes ); ?>>    
-			                	<h3><?php the_title(); ?></h3>
-			                    <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-			                    	
-			                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
-			                        <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?>
-
-			                        
-
-			                        <span class="price"><?php echo $product->get_price_html(); ?></span>                    
-
-			                    </a>
-
-			                    <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
-
-			                </li>
-
-			    <?php endwhile; ?>
-			    <?php wp_reset_query(); ?>
-			</ul><!--/.products-->
-		</div> <!-- /.col.grid_12_of_12 -->
-		<div class="row">
-			<div class="col grid_4_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=30]"); 
-				?>
-			</div>
-			<div class="col grid_4_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=31]"); 
-				?>
-			</div>
-			<div class="col grid_4_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=32]"); 
-				?>
-			</div>
-		</div>
-		<div class="row">
-			<ul class="products col grid_12_of_12" style="text-align:center; margin:0">
-				<h4>Proteção para o seu bebê</h4>
-			    <?php
-
-			        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
-			        $loop = new WP_Query( $args );
-
-			        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
-
-			        		<?php
-							// Store loop count we're currently on
-							if ( empty( $woocommerce_loop['loop'] ) ) {
-								$woocommerce_loop['loop'] = 0;
-							}
-
-							// Store column count for displaying the grid
-							if ( empty( $woocommerce_loop['columns'] ) ) {
-								$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
-							}
-
-							// Ensure visibility
-							if ( ! $product || ! $product->is_visible() ) {
-								return;
-							}
-
-							// Increase loop count
-							$woocommerce_loop['loop']++;
-
-							// Extra post classes
-							$classes = array();
-							if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ) {
-								$classes[] = 'first';
-							}
-							if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
-								$classes[] = 'last';
-							}
-			        		?>
-
-			                <li <?php post_class( $classes ); ?>>    
-			                	<h3><?php the_title(); ?></h3>
-			                    <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-			                    	
-			                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
-			                        <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?>
-
-			                        
-
-			                        <span class="price"><?php echo $product->get_price_html(); ?></span>                    
-
-			                    </a>
-
-			                    <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
-
-			                </li>
-
-			    <?php endwhile; ?>
-			    <?php wp_reset_query(); ?>
-			</ul><!--/.products-->
-		</div> <!-- /.col.grid_12_of_12 -->
-		<div class="row">
-			<div class="col grid_6_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=34]"); 
-				?>
-			</div>
-			<div class="col grid_6_of_12 efeito-cinza">
-				<?php 
-				    echo do_shortcode("[metaslider id=36]"); 
-				?>
-			</div>
-		</div>
-		<div class="row">
-			<ul class="products col grid_12_of_12" style="text-align:center; margin:0">
-				<h4>Definir ultima categoria</h4>
-			    <?php
-
-			        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
-			        $loop = new WP_Query( $args );
-
-			        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
-
-			        		<?php
-							// Store loop count we're currently on
-							if ( empty( $woocommerce_loop['loop'] ) ) {
-								$woocommerce_loop['loop'] = 0;
-							}
-
-							// Store column count for displaying the grid
-							if ( empty( $woocommerce_loop['columns'] ) ) {
-								$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
-							}
-
-							// Ensure visibility
-							if ( ! $product || ! $product->is_visible() ) {
-								return;
-							}
-
-							// Increase loop count
-							$woocommerce_loop['loop']++;
-
-							// Extra post classes
-							$classes = array();
-							if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ) {
-								$classes[] = 'first';
-							}
-							if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
-								$classes[] = 'last';
-							}
-			        		?>
-
-			                <li <?php post_class( $classes ); ?>>    
-			                	<h3><?php the_title(); ?></h3>
-			                    <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-			                    	
-			                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
-			                        <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?>
-
-			                        
-
-			                        <span class="price"><?php echo $product->get_price_html(); ?></span>                    
-
-			                    </a>
-
-			                    <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
-
-			                </li>
-
-			    <?php endwhile; ?>
-			    <?php wp_reset_query(); ?>
-			</ul><!--/.products-->
-		</div> <!-- /.col.grid_12_of_12 -->
-		<?php get_template_part( 'newsletter' ); ?>
-	</div> <!-- /#primary.site-content.row -->
-
-<?php get_footer(); ?>
+<?php get_footer( 'shop' ); ?>

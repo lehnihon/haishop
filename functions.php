@@ -1058,7 +1058,8 @@ if ( ! function_exists( 'quark_woocommerce_before_main_content' ) ) {
 			echo '<div class="col grid_12_of_12">';
 		}
 		else {
-			echo '<div class="col grid_8_of_12">';
+			echo '<div class="col grid_12_of_12">';
+			//echo '<div class="col grid_8_of_12">';
 		}
 	}
 	add_action( 'woocommerce_before_main_content', 'quark_woocommerce_before_main_content', 10 );

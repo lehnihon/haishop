@@ -17,37 +17,57 @@
 	<div id="footercontainer">
 
 		<footer class="site-footer row" role="contentinfo">
-
-			<?php
-			// Count how many footer sidebars are active so we can work out how many containers we need
-			$footerSidebars = 0;
-			for ( $x=1; $x<=4; $x++ ) {
-				if ( is_active_sidebar( 'sidebar-footer' . $x ) ) {
-					$footerSidebars++;
-				}
-			}
-
-			// If there's one or more one active sidebars, create a row and add them
-			if ( $footerSidebars > 0 ) { ?>
-				<?php
-				// Work out the container class name based on the number of active footer sidebars
-				$containerClass = "grid_" . 12 / $footerSidebars . "_of_12";
-
-				// Display the active footer sidebars
-				for ( $x=1; $x<=4; $x++ ) {
-					if ( is_active_sidebar( 'sidebar-footer'. $x ) ) { ?>
-						<div class="col <?php echo $containerClass?>">
-							<div class="widget-area" role="complementary">
-								<?php dynamic_sidebar( 'sidebar-footer'. $x ); ?>
-							</div>
-						</div> <!-- /.col.<?php echo $containerClass?> -->
-					<?php }
-				} ?>
-
-			<?php } ?>
-
+			<div class="col grid_2_of_12">
+				<h5>Departamentos</h5>
+				<ul>
+					<li><a href="#">Bóia Elétrica</a></li>
+					<li><a href="#">Chaves</a></li>
+					<li><a href="#">Chaves Botão Caça</a></li>
+					<li><a href="#">Coluna de Instrumentos</a></li>
+				</ul>
+			</div>		
+			<div class="col grid_3_of_12"><br/>
+				<ul>
+					<li><a href="#">Instrumentação Automotiva</a></li>
+					<li><a href="#">Painel Automotivo</a></li>
+					<li><a href="#">Iluminação</a></li>
+					<li><a href="#">Cronomac</a></li>
+				</ul>
+			</div>
+			<div class="col grid_2_of_12"><br/>
+				<ul>
+					<li><a href="#">Race Tronix</a></li>
+					<li><a href="#">Willtec</a></li>
+					<li><a href="#">Bebês</a></li>
+					<li><a href="#">Casa</a></li>
+				</ul>
+			</div>
+			<div class="col grid_2_of_12">
+				<h5>Sobre a Haishop</h5>
+				<ul>
+					<li><a href="#">Institucional</a></li>
+					<li><a href="#">Política de Privacidade</a></li>
+					<li><a href="#">Troca e Devolução</a></li>
+					<li><a href="#">Fale Conosco</a></li>
+				</ul>
+			</div>
+			<div class="col grid_3_of_12">
+				<h5>Nossa Redes Sociais</h5>
+				<img class="efeito-cinza" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/redes_sociais.png"; ?>" alt="" />
+			</div>
 		</footer> <!-- /.site-footer.row -->
-
+		<footer class="site-footer row" style="border-top:2px solid #E8E8E8 ">
+			<div class="col grid_6_of_12">
+				<h5>Formas de Pagamento</h5>
+				<img class="efeito-cinza" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/formas_pgto.jpg"; ?>" alt="" />
+			</div>
+			<div class="col grid_6_of_12">
+				<h5>Televendas</h5>
+				<p>
+					11 2296-3412
+				</p>
+			</div>
+		</footer>
 		<?php if ( of_get_option( 'footer_content', quark_get_credits() ) ) {
 			echo '<div class="row smallprint">';
 			echo apply_filters( 'meta_content', wp_kses_post( of_get_option( 'footer_content', quark_get_credits() ) ) );
@@ -55,7 +75,11 @@
 		} ?>
 
 	</div> <!-- /.footercontainer -->
-
+	<div id="copyrightcontainer">
+		<p>
+			© Copyright 2015 - Haishop
+		</p>
+	</div>
 </div> <!-- /.#wrapper.hfeed.site -->
 
 <?php wp_footer(); ?>
