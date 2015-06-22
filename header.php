@@ -54,7 +54,7 @@
 	<div id="headercontainer">
 		<header id="masthead" class="site-header" role="banner">
 			<div class="row">
-				<div class="col grid_3_of_12">
+				<div class="col grid_4_of_12">
 					<h1>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
 							<img class="efeito-cinza" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/logo_haishop.png"; ?>" alt="" />
@@ -62,12 +62,18 @@
 					</h1>
 				</div> <!-- /.col.grid_5_of_12 -->
 
-				<div class="col grid_6_of_12">
-					<br>
+				<div class="col grid_6_of_12" style="padding:15px 0">
 					<?php get_search_form(); ?>
 				</div> <!-- /.col.grid_7_of_12 -->
-				<div class="col grid_3_of_12"><br>
-					<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?> </a>
+				<div class="col grid_2_of_12" style="padding:15px 0">
+					<ul class="cart-item">
+						<li>
+							<img class="efeito-cinza" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/botao_carrinho.png"; ?>" alt="" />
+						</li>
+						<li style="width:60%; padding-top:5px">
+							<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?> </a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</header> <!-- /#masthead.site-header.row -->
@@ -84,38 +90,5 @@
 			</div>
 		</div>
 	</div>
-	<div id="bannercontainer">
-		<div class="banner row">
-			<?php if ( is_front_page() ) {
-				// Count how many banner sidebars are active so we can work out how many containers we need
-				$bannerSidebars = 0;
-				for ( $x=1; $x<=2; $x++ ) {
-					if ( is_active_sidebar( 'frontpage-banner' . $x ) ) {
-						$bannerSidebars++;
-					}
-				}
-
-				// If there's one or more one active sidebars, create a row and add them
-				if ( $bannerSidebars > 0 ) { ?>
-					<?php
-					// Work out the container class name based on the number of active banner sidebars
-					$containerClass = "grid_" . 12 / $bannerSidebars . "_of_12";
-
-					// Display the active banner sidebars
-					for ( $x=1; $x<=2; $x++ ) {
-						if ( is_active_sidebar( 'frontpage-banner'. $x ) ) { ?>
-							<div class="col <?php echo $containerClass?>">
-								<div class="widget-area" role="complementary">
-									<?php dynamic_sidebar( 'frontpage-banner'. $x ); ?>
-								</div> <!-- /.widget-area -->
-							</div> <!-- /.col.<?php echo $containerClass?> -->
-						<?php }
-					} ?>
-
-				<?php }
-			} ?>
-		</div> <!-- /.banner.row -->
-	</div> <!-- /#bannercontainer -->
-
 	<div id="maincontentcontainer">
 		<?php	do_action( 'quark_before_woocommerce' ); ?>
