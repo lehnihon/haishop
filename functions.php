@@ -1151,11 +1151,11 @@ function cs_woocommerce_remove_default_tags( $tabs ) {
 	/*if ( isset( $tabs['description'] ) ) {
 		unset( $tabs['description'] );
 	}
-
+	*/
 	// Remove additional information tab.
 	if ( isset( $tabs['additional_information'] ) ) {
 		unset( $tabs['additional_information'] );
-	}*/
+	}
 
 	// Remove reviews tab.
 	if ( isset( $tabs['reviews'] ) ) {
