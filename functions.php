@@ -1143,3 +1143,26 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	return $fragments;
 }
 
+/**
+ * Remove default product tabs.
+ */
+function cs_woocommerce_remove_default_tags( $tabs ) {
+	// Remove description tab.
+	/*if ( isset( $tabs['description'] ) ) {
+		unset( $tabs['description'] );
+	}
+
+	// Remove additional information tab.
+	if ( isset( $tabs['additional_information'] ) ) {
+		unset( $tabs['additional_information'] );
+	}*/
+
+	// Remove reviews tab.
+	if ( isset( $tabs['reviews'] ) ) {
+		unset( $tabs['reviews'] );
+	}
+
+	return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'cs_woocommerce_remove_default_tags' );
