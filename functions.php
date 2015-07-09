@@ -1166,3 +1166,14 @@ function cs_woocommerce_remove_default_tags( $tabs ) {
 }
 
 add_filter( 'woocommerce_product_tabs', 'cs_woocommerce_remove_default_tags' );
+
+function woocommerce_template_single_codigo() {
+	wc_get_template( 'single-product/codigo.php' );
+}
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_codigo', 7 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 9 );
+remove_action( 'woocommerce_single_product_summary', array( 'WC_Correios_Product_Shipping_Simulator', 'simulator' ), 45 );
