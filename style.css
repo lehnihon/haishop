@@ -50,6 +50,10 @@ td { vertical-align: top; }
 	color: #f21b2d;
 }
 
+.vermelho a:visited{
+	color: #f21b2d;
+}
+
 body { 
 	margin: 0 auto;
 	padding: 0;
@@ -2089,6 +2093,22 @@ h1.page-title {
 	font-size: 48px;
 	font-size: 3rem;
 	line-height: 1.25;
+}
+
+.woocommerce #primary .quantity{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	float:none;
+}
+
+.woocommerce #primary .single_add_to_cart_button{
+	margin-top: 10px;
+	border: 0;
+	padding: 13px;
+	margin-right: 10px;
+	background-image: none;
+	background-color: #005176;
+	color:white;
 }
 
 .woocommerce .woocommerce-info:before,

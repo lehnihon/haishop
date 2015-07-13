@@ -33,7 +33,7 @@ if ( ! $product->is_purchasable() ) {
 
 	<form class="cart" method="post" enctype='multipart/form-data'>
 	 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-
+	 	<span style="color: #005176; font-weight:bold">Quantidade</span>
 	 	<?php
 	 		if ( ! $product->is_sold_individually() )
 	 			woocommerce_quantity_input( array(
@@ -41,10 +41,8 @@ if ( ! $product->is_purchasable() ) {
 	 				'max_value' => apply_filters( 'woocommerce_quantity_input_max', $product->backorders_allowed() ? '' : $product->get_stock_quantity(), $product )
 	 			) );
 	 	?>
-
 	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
-
-	 	<button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+	 	<button type="submit" class="efeito-claro single_add_to_cart_button button alt">Comprar</button><a href="<?php echo esc_url( home_url( '/' ))."/contato/"; ?>" class="efeito-claro entre-contato"></a>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>

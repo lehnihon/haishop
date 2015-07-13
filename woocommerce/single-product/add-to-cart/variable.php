@@ -22,8 +22,10 @@ global $product, $post;
 			<tbody>
 				<?php $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
 					<tr>
-						<td class="label"><label for="<?php echo sanitize_title( $name ); ?>"><?php echo wc_attribute_label( $name ); ?></label></td>
-						<td class="value"><select id="<?php echo esc_attr( sanitize_title( $name ) ); ?>" name="attribute_<?php echo sanitize_title( $name ); ?>" data-attribute_name="attribute_<?php echo sanitize_title( $name ); ?>">
+						<td style="padding-top:5px; color:#005176" class="label"><label for="<?php echo sanitize_title( $name ); ?>"><?php echo wc_attribute_label( $name ); ?></label></td>
+					</tr>
+					<tr>
+						<td style="padding-top:5px" class="value"><select id="<?php echo esc_attr( sanitize_title( $name ) ); ?>" name="attribute_<?php echo sanitize_title( $name ); ?>" data-attribute_name="attribute_<?php echo sanitize_title( $name ); ?>">
 							<option value=""><?php echo __( 'Choose an option', 'woocommerce' ) ?>&hellip;</option>
 							<?php
 								if ( is_array( $options ) ) {
@@ -72,11 +74,14 @@ global $product, $post;
 		<div class="single_variation_wrap" style="display:none;">
 			<?php do_action( 'woocommerce_before_single_variation' ); ?>
 
-			<div class="single_variation"></div>
+			
 
 			<div class="variations_button">
+				<span style="color:#005176; font-weight:bold">Quantidade</span>
 				<?php woocommerce_quantity_input(); ?>
-				<button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+				<span style="color:#005176; font-weight:bold">Preço</span>
+				<div class="single_variation"></div>
+				<button type="submit" class="efeito-claro single_add_to_cart_button button alt">Comprar</button><a href="<?php echo esc_url( home_url( '/' ))."/contato/"; ?>" class="efeito-claro entre-contato"></a>
 			</div>
 
 			<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />

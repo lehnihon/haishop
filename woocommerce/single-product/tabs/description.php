@@ -18,7 +18,7 @@ $heading = esc_html( apply_filters( 'woocommerce_product_description_heading', _
 ?>
 
 <?php if ( $heading ): ?>
-  <h2><?php echo $heading; ?></h2>
+  <h3 style="text-align:left; color: #005176; margin:0; padding:0; margin-bottom:10px;"><?php echo $heading; ?></h3>
 <?php endif; ?>
 
 <?php the_content(); ?>
