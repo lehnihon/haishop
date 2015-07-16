@@ -79,7 +79,6 @@ global $product, $post;
 			<div class="variations_button">
 				<span style="color:#005176; font-weight:bold">Quantidade</span>
 				<?php woocommerce_quantity_input(); ?>
-				<span style="color:#005176; font-weight:bold">Preço</span>
 				<div class="single_variation"></div>
 				<button type="submit" class="efeito-claro single_add_to_cart_button button alt">Comprar</button><a href="<?php echo esc_url( home_url( '/' ))."/contato/"; ?>" class="efeito-claro entre-contato"></a>
 			</div>

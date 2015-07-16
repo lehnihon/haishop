@@ -53,7 +53,12 @@
 			</div>
 			<div class="col grid_3_of_12">
 				<h5>Nossa Redes Sociais</h5>
-				<img class="efeito-cinza" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/redes_sociais.png"; ?>" alt="" />
+				<ul class="redes_sociais_bot">
+					<li class="youtube"><a target="_blank" href="#"></a></li>
+					<li class="instagram"><a target="_blank" href="#"></a></li>
+					<li class="twitter"><a target="_blank" href="#"></a></li>
+					<li class="facebook"><a target="_blank" href="#"></a></li>
+				</ul>	
 			</div>
 		</footer> <!-- /.site-footer.row -->
 		<footer class="site-footer row" style="border-top:2px solid #E8E8E8 ">

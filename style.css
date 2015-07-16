@@ -867,21 +867,22 @@ select {
 
 }
 
-.home-products .product{
+.products .product{
 	border:1px solid #C0C0C0;
+	text-align: center;
 }
 
-#primary .onsale{
+#maincontentcontainer .onsale{
 	top:-10px;
 }
 
-#primary .price{
+#maincontentcontainer .price{
 	color: #f21b2d;
 	font-size: 16px;
 	font-size: 1rem;
 }
 
-#primary .add_to_cart_button{
+#maincontentcontainer .add_to_cart_button{
 	width:90%;
 	margin-bottom: 1em;
 }
@@ -1786,6 +1787,62 @@ form label.error {
 	clear: both;
 	line-height: 2;
 	overflow: hidden;
+}
+
+.redes_sociais_bot{
+	height:38px;
+	text-align: left;
+	list-style:none;
+	margin: 0 auto;
+	width: 300px;
+	padding:0;
+}
+
+.redes_sociais_bot li:hover{
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.redes_sociais_bot a{
+	display: inline-block;
+	width:38px;
+	height:38px
+}
+
+.redes_sociais_bot .youtube{
+	background-image: url("images/redes_sociais.png");
+	background-position: left,center;
+	background-repeat:no-repeat;
+	width:38px;
+	height:38px;
+	display:inline-block;		
+}
+
+.redes_sociais_bot .instagram{
+	background-image: url("images/redes_sociais.png");
+	background-position: -43px,center;
+	background-repeat:no-repeat;
+	width:38px;
+	height:38px;
+	display:inline-block;		
+}
+
+.redes_sociais_bot .twitter{
+	background-image: url("images/redes_sociais.png");
+	background-position: -87px,center;
+	background-repeat:no-repeat;
+	width:38px;
+	height:38px;
+	display:inline-block;		
+}
+
+.redes_sociais_bot .facebook{
+	background-image: url("images/redes_sociais.png");
+	background-position: right,center;
+	background-repeat:no-repeat;
+	width:38px;
+	height:38px;
+	display:inline-block;		
 }
 
 #nav-above {

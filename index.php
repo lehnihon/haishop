@@ -44,7 +44,7 @@ get_header( 'shop' ); ?>
 				<h4>Produtos para simplificar sua vida</h4>
 			    <?php
 
-			        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+			        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'massagens', 'orderby' => 'rand' );
 			        $loop = new WP_Query( $args );
 
 			        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
