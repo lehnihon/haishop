@@ -48,7 +48,7 @@
 					<li><a href="#">Institucional</a></li>
 					<li><a href="#">Política de Privacidade</a></li>
 					<li><a href="#">Troca e Devolução</a></li>
-					<li><a href="#">Fale Conosco</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/' ))."/contato/"; ?>">Fale Conosco</a></li>
 				</ul>
 			</div>
 			<div class="col grid_3_of_12">

@@ -18,24 +18,24 @@ get_header( 'shop' ); ?>
 		<div id="bannercontainer" class="row">
 			<div class="col grid_12_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=28]"); 
+				    echo do_shortcode("[metaslider id=8]"); 
 				?>	
 			</div>			
 		</div> <!-- /#bannercontainer -->
 		<div class="row">
 			<div class="col grid_4_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=30]"); 
+				    echo do_shortcode("[metaslider id=11]"); 
 				?>
 			</div>
 			<div class="col grid_4_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=31]"); 
+				    echo do_shortcode("[metaslider id=12]"); 
 				?>
 			</div>
 			<div class="col grid_4_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=32]"); 
+				    echo do_shortcode("[metaslider id=13]"); 
 				?>
 			</div>
 		</div>
@@ -44,7 +44,7 @@ get_header( 'shop' ); ?>
 				<h4>Produtos para simplificar sua vida</h4>
 			    <?php
 
-			        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'massagens', 'orderby' => 'rand' );
+			        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
 			        $loop = new WP_Query( $args );
 
 			        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
@@ -102,12 +102,12 @@ get_header( 'shop' ); ?>
 		<div class="row">
 			<div class="col grid_6_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=34]"); 
+				    echo do_shortcode("[metaslider id=20]"); 
 				?>
 			</div>
 			<div class="col grid_6_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=36]"); 
+				    echo do_shortcode("[metaslider id=22]"); 
 				?>
 			</div>
 		</div>
@@ -174,17 +174,17 @@ get_header( 'shop' ); ?>
 		<div class="row">
 			<div class="col grid_4_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=30]"); 
+				    echo do_shortcode("[metaslider id=23]"); 
 				?>
 			</div>
 			<div class="col grid_4_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=31]"); 
+				    echo do_shortcode("[metaslider id=24]"); 
 				?>
 			</div>
 			<div class="col grid_4_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=32]"); 
+				    echo do_shortcode("[metaslider id=25]"); 
 				?>
 			</div>
 		</div>
@@ -251,12 +251,12 @@ get_header( 'shop' ); ?>
 		<div class="row">
 			<div class="col grid_6_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=34]"); 
+				    echo do_shortcode("[metaslider id=26]"); 
 				?>
 			</div>
 			<div class="col grid_6_of_12 efeito-cinza">
 				<?php 
-				    echo do_shortcode("[metaslider id=36]"); 
+				    echo do_shortcode("[metaslider id=27]"); 
 				?>
 			</div>
 		</div>
