@@ -867,13 +867,13 @@ select {
 
 }
 
-#primary .products .product{
+.products .product{
 	border:1px solid #C0C0C0;
 	text-align: center;
-	padding: 15px;
+	padding: 15px !important;
 }
 
-#primary .products .product .price{
+.products .product .price{
 	font-weight: bold;
 }
 
@@ -1800,7 +1800,6 @@ form label.error {
 	height:38px;
 	text-align: left;
 	list-style:none;
-	margin: 0 auto;
 	width: 300px;
 	padding:0;
 }

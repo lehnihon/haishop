@@ -26,7 +26,7 @@
 					<li><a href="#">Coluna de Instrumentos</a></li>
 				</ul>
 			</div>		
-			<div class="col grid_3_of_12"><br/>
+			<div class="col grid_2_of_12"><br/>
 				<ul>
 					<li><a href="#">Instrumentação Automotiva</a></li>
 					<li><a href="#">Painel Automotivo</a></li>
@@ -51,7 +51,7 @@
 					<li><a href="<?php echo esc_url( home_url( '/' ))."/contato/"; ?>">Fale Conosco</a></li>
 				</ul>
 			</div>
-			<div class="col grid_3_of_12">
+			<div class="col grid_4_of_12">
 				<h5>Nossa Redes Sociais</h5>
 				<ul class="redes_sociais_bot">
 					<li class="youtube"><a target="_blank" href="#"></a></li>
