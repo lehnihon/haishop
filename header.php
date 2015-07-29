@@ -44,8 +44,7 @@
 			<div class="col grid_12_of_12">
 				<ul class="redes_sociais_header">
 					<li><a target="_blank" href="#">Sobre a Hai Shop</a></li>
-					<li><a target="_blank" href="#">Minha Conta</a></li>
-					<li><a target="_blank" href="#">Cadastre-se</a></li>
+					<li><a target="_blank" href="#">Login / Cadastro</a></li>
 					<li><a target="_blank" href="#">Atendimento</a></li>
 				</ul>
 			</div>
