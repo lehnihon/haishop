@@ -877,10 +877,6 @@ select {
 	font-weight: bold;
 }
 
-#primary .product .images{
-	padding: 25px;
-	padding-top: 0;
-}
 
 
 #maincontentcontainer .onsale{
@@ -2342,6 +2338,13 @@ h1.page-title {
 
 .shipping-calculator-button {
 	text-decoration: none;
+}
+
+#primary div.product div.images img{
+	width: auto;
+display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 /* ==========================================================================
