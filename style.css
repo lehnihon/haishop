@@ -861,7 +861,7 @@ select {
 	margin: 0 auto;
 }
 
-.search-form .pesquisar-input{
+.search-form .pFesquisar-input{
 	width: 80%;
 	padding: 8px;
 	display: inline-block;
@@ -2159,7 +2159,7 @@ h1.page-title {
 }
 
 h1.page-title { 
-	font-size: 48px;
+	font-size: 38px;
 	font-size: 3rem;
 	line-height: 1.25;
 }
