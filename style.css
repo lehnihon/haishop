@@ -867,12 +867,37 @@ select {
 
 }
 
-.products .product{
+#maincontentcontainer #primary .products .col{
+	border:1px solid #C0C0C0;
+	text-align: center;
+	padding: 15px !important;
+	margin-left:1%;
+}
+
+#maincontentcontainer .site-content .products .col{
 	border:1px solid #C0C0C0;
 	text-align: center;
 	padding: 15px !important;
 }
 
+#maincontentcontainer #primary .products .col:hover,
+#maincontentcontainer .site-content .products .col:hover
+{
+	border:1px solid #f88d96;
+}
+
+/*B&W*/
+.bw {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.bw:hover {
+  -webkit-filter: grayscale(100%);
+}
 .products .product .price{
 	font-weight: bold;
 }
@@ -896,6 +921,52 @@ select {
 
 .newsletter{
 	background-color: #f5f5f5;
+}
+
+#newsletter-background .newsletter-texto{
+	margin: 0;
+	margin-top: 35px;
+}
+
+#newsletter-background .newsletter-texto p{
+	margin: 0;
+}
+
+
+#newsletter-background .newsletter-nome-wrap{
+	margin: 0;
+}
+
+#newsletter-background .newsletter-nome{
+	padding: 15px 5px;
+	margin-top: 35px;
+}
+
+
+#newsletter-background .newsletter-email-wrap{
+	margin: 0;
+}
+
+#newsletter-background .newsletter-email{
+	padding: 15px 5px;
+	margin-top: 35px;
+}
+
+#newsletter-background .newsletter-enviar-wrap{
+	margin: 0;
+}
+
+#newsletter-background .newsletter-enviar{
+	padding: 15px;
+	background-image: none;
+	background-color: #d60158;
+	color:white;
+	margin-top: 35px;
+}
+
+#newsletter-background .newsletter-enviar:hover{
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
 .descricao-produto{
