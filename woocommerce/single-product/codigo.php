@@ -21,4 +21,4 @@ global $product;
 	?>
 	</span><br/>
 	<span class="sku_wrapper"><?php _e( 'Código:', 'woocommerce' ); ?> <span class="sku" itemprop="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'N/A', 'woocommerce' ); ?></span>.</span>
-</p>
+</p><br/>

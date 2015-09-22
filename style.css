@@ -14,7 +14,7 @@ Description: Tema para site Haishop
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Using rem font sizing (Root em’s) with fallback to px for ie8 and below - http://snook.ca/archives/html_and_css/font-size-with-rem */
-body { margin: 0; font-size: 16px; font-size: 1rem; line-height: 1.5; }
+body { margin: 0; font-size: 16px; font-size: 1rem; line-height: 1.5; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 
 ::-webkit-selection { background: #5784FE; color: #fff; text-shadow: none; }
 ::-moz-selection { background: #5784FE; color: #fff; text-shadow: none; }
@@ -120,7 +120,7 @@ img.wp-smiley,
 
 /* Header */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #505050;
@@ -130,8 +130,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 { 
 	margin-bottom: 10px;
 	margin-bottom: 0.625rem;
-	font-size: 48px;
-	font-size: 3rem;
+	font-size: 28px;
+	font-size: 1.75rem;
 	line-height: 1.25;
 }
 
@@ -154,7 +154,8 @@ h3 {
 }
 
 #primary h3{
-	padding: 25px 10px;
+	padding: 25px 0px;
+	font-weight: bold;
 }
 
 
@@ -199,8 +200,7 @@ ol, ul {
 }
 
 p, ol, ul, dl, address {
-	margin: 0 0 24px 0;
-	margin: 0 0 1.5rem 0;
+	margin: 0 0 5px 0;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -211,25 +211,25 @@ ul ul, ul ol, ol ol, ol ul {
 }
 
 dt {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 }
 
 b, strong { 
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 }
 
 em {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 }
 
 strong em, b em {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 700;
 }
@@ -308,7 +308,7 @@ blockquote.pull-right {
 }
 
 blockquote p {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 24px;
@@ -397,7 +397,7 @@ sub {
 .wp-caption .wp-caption-text,
 .gallery-caption,
 .entry-caption {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
@@ -441,7 +441,7 @@ img.wp-smiley, .rsswidget img {
 }
 
 .menu-toggle, button, input {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
@@ -862,15 +862,47 @@ select {
 
 .search-form .pesquisar-input{
 	width: 80%;
-	padding: 7px;
+	padding: 8px;
 	display: inline-block;
 
 }
 
-.products .product{
+#maincontentcontainer #primary .products .col{
 	border:1px solid #C0C0C0;
 	text-align: center;
+	padding: 15px !important;
+	margin-left:1%;
 }
+
+#maincontentcontainer .site-content .products .col{
+	border:1px solid #C0C0C0;
+	text-align: center;
+	padding: 15px !important;
+}
+
+#maincontentcontainer #primary .products .col:hover,
+#maincontentcontainer .site-content .products .col:hover
+{
+	border:1px solid #f88d96;
+}
+
+/*B&W*/
+.bw {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.bw:hover {
+  -webkit-filter: grayscale(100%);
+}
+.products .product .price{
+	font-weight: bold;
+}
+
+
 
 #maincontentcontainer .onsale{
 	top:-10px;
@@ -891,6 +923,52 @@ select {
 	background-color: #f5f5f5;
 }
 
+#newsletter-background .newsletter-texto{
+	margin: 0;
+	margin-top: 35px;
+}
+
+#newsletter-background .newsletter-texto p{
+	margin: 0;
+}
+
+
+#newsletter-background .newsletter-nome-wrap{
+	margin: 0;
+}
+
+#newsletter-background .newsletter-nome{
+	padding: 15px 5px;
+	margin-top: 35px;
+}
+
+
+#newsletter-background .newsletter-email-wrap{
+	margin: 0;
+}
+
+#newsletter-background .newsletter-email{
+	padding: 15px 5px;
+	margin-top: 35px;
+}
+
+#newsletter-background .newsletter-enviar-wrap{
+	margin: 0;
+}
+
+#newsletter-background .newsletter-enviar{
+	padding: 15px;
+	background-image: none;
+	background-color: #d60158;
+	color:white;
+	margin-top: 35px;
+}
+
+#newsletter-background .newsletter-enviar:hover{
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
 .descricao-produto{
 	background-color: #f5f5f5;
 }
@@ -900,7 +978,7 @@ select {
 }
 
 .comments-link {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
@@ -930,7 +1008,7 @@ select {
 }
 
 article.sticky .featured-post {
-	font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	border-top: 4px double #aaa;
@@ -1027,7 +1105,7 @@ article.sticky {
 
 .entry-header address,
 .comment-content address {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	display: block;
@@ -1039,7 +1117,7 @@ article.sticky {
 
 .entry-header time,
 .entry-header address {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
@@ -1092,7 +1170,7 @@ article.sticky {
 
 .entry-content dt,
 .comment-content dt {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 1.5;
@@ -1354,7 +1432,7 @@ article.sticky {
 }
 
 .archive-meta {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	color: #777;
@@ -1414,7 +1492,7 @@ article.sticky {
 }
 
 .comments-area article header time {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	line-height: 1.8;
@@ -1571,7 +1649,7 @@ span.required {
 }
 
 form label.error {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	display:block;
@@ -1793,7 +1871,6 @@ form label.error {
 	height:38px;
 	text-align: left;
 	list-style:none;
-	margin: 0 auto;
 	width: 300px;
 	padding:0;
 }
@@ -1951,11 +2028,11 @@ li span.dots {
 }
 
 .nav-menu {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.5;
 }
 
@@ -1977,7 +2054,7 @@ li span.dots {
 }
 
 .main-navigation li.menu-parent-item > a:after { /* If you don't want the arrows on the top level drop down, simply remove this style */
-	font-family: 'FontAwesome';
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	speak: none;
@@ -1988,7 +2065,7 @@ li span.dots {
 }
 
 .main-navigation ul li li.menu-parent-item > a:after { /* If you don't want the arrows on the sub-menu options, simply remove this style */
-	font-family: 'FontAwesome';
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	speak: none;
@@ -2139,7 +2216,7 @@ li span.dots {
    ========================================================================== */
 
 h1.page-title {
-	font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #333;
@@ -2147,8 +2224,8 @@ h1.page-title {
 }
 
 h1.page-title { 
-	font-size: 48px;
-	font-size: 3rem;
+	font-size: 28px;
+	font-size: 2rem;
 	line-height: 1.25;
 }
 
@@ -2331,6 +2408,13 @@ h1.page-title {
 
 .shipping-calculator-button {
 	text-decoration: none;
+}
+
+#primary div.product div.images img{
+	width: auto;
+display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 /* ==========================================================================
