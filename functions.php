@@ -1165,6 +1165,15 @@ function cs_woocommerce_remove_default_tags( $tabs ) {
 	return $tabs;
 }
 
+function annointed_admin_bar_remove() {
+        global $wp_admin_bar;
+
+        /* Remove their stuff */
+        $wp_admin_bar->remove_menu('wp-logo');
+}
+
+add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
+
 add_filter( 'woocommerce_product_tabs', 'cs_woocommerce_remove_default_tags' );
 
 function woocommerce_template_single_codigo() {
