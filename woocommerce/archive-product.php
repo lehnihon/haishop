@@ -33,6 +33,53 @@ get_header( 'shop' ); ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
+		<?php 
+		global $wp_query;
+		$cat_obj = $wp_query->get_queried_object();
+		?>
+
+		<div class="row">
+			<div class="col grid_3_of_12 woo-produtos-menu">
+				<?php if($cat_obj->slug == 'instrumentacao'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Marca</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-4"]'); ?>
+					</div>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-5"]'); ?>
+					</div>
+				<?php endif; ?>
+				<?php if($cat_obj->slug == 'chave-botao-caca'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-3"]'); ?>
+					</div>
+				<?php endif; ?>
+				<?php if($cat_obj->slug == 'coluna-de-instrumentos'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-2"]'); ?>
+					</div>
+				<?php endif; ?>
+				<div class="filtro">
+					<div class="titulo-filtro">
+						<span>Preço</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+					</div>
+					<?php echo do_shortcode('[widget id="woocommerce_price_filter-2"]'); ?>
+				</div>
+
+			</div>	
+			<div class="col grid_9_of_12">
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -42,7 +89,7 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
-				do_action( 'woocommerce_before_shop_loop' );
+				
 			?>
 
 			<?php woocommerce_product_loop_start(); ?>
@@ -71,7 +118,8 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
-
+			</div>		
+		</div>
 	<?php
 		/**
 		 * woocommerce_after_main_content hook
