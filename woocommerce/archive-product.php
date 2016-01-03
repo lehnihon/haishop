@@ -40,6 +40,61 @@ get_header( 'shop' ); ?>
 
 		<div class="row">
 			<div class="col grid_3_of_12 woo-produtos-menu">
+				<?php if($cat_obj->slug == 'boia-eletrica'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-6"]'); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if($cat_obj->slug == 'chaves'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-7"]'); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if($cat_obj->slug == 'painel'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-8"]'); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if($cat_obj->slug == 'marcas'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-9"]'); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if($cat_obj->slug == 'casa'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-10"]'); ?>
+					</div>
+				<?php endif; ?>
+
+
+				<?php if($cat_obj->slug == 'bebes'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-11"]'); ?>
+					</div>
+				<?php endif; ?>
+
 				<?php if($cat_obj->slug == 'instrumentacao'):?>
 					<div class="filtro">
 						<div class="titulo-filtro">
@@ -70,12 +125,7 @@ get_header( 'shop' ); ?>
 						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-2"]'); ?>
 					</div>
 				<?php endif; ?>
-				<div class="filtro">
-					<div class="titulo-filtro">
-						<span>Preço</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
-					</div>
-					<?php echo do_shortcode('[widget id="woocommerce_price_filter-2"]'); ?>
-				</div>
+			
 
 			</div>	
 			<div class="col grid_9_of_12">

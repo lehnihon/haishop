@@ -43,7 +43,10 @@ $classes[] = 'col grid_4_of_12';
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
 	<a class="bw" href="<?php the_permalink(); ?>">
-		<h3><?php the_title(); ?></h3>
+		<h3><?php if (strlen($post->post_title) > 60) {
+echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+the_title();
+} ?></h3>
 		<?php
 			/**
 			 * woocommerce_before_shop_loop_item_title hook

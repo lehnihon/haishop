@@ -30,7 +30,6 @@
 					<ul>
 						<li><a href="#">Instrumentação Automotiva</a></li>
 						<li><a href="#">Painel Automotivo</a></li>
-						<li><a href="#">Iluminação</a></li>
 						<li><a href="#">Cronomac</a></li>
 					</ul>
 				</div>
