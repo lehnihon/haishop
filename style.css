@@ -1673,6 +1673,7 @@ form label.error {
 
 #footercontainer {
 	margin-top: 30px;
+	padding: 25px 0;
 	background-color: #f5f5f5;
 	width: 100%;	
 }
@@ -2450,7 +2451,19 @@ div.products .product{
 
 div.woocommerce div#customer_login{
 	background-color: #f5f5f5;
-	padding:50px 0;
+	padding:25px;
+}
+div.woocommerce form.login, div.woocommerce form.register{
+	border:0;
+}
+
+div.woocommerce form.login h2, div.woocommerce form.register h2{
+	font-size: 26px;
+	color:#f21b2d;
+}
+
+div.woocommerce form.login .inline{
+	margin-left: 20px;
 }
 
 /* ==========================================================================

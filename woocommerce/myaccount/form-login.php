@@ -25,10 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php endif; ?>
 
-		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
+		
 
 		<form method="post" class="login">
-
+			<h2>Minha Conta</h2>
+			<p><strong>Faça login com sua conta</strong></p>
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 			<p class="form-row form-row-wide">
@@ -63,10 +64,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="col-2">
 
-		<h2><?php _e( 'Register', 'woocommerce' ); ?></h2>
+		
 
 		<form method="post" class="register">
-
+			<h2>Cadastre-se</h2>
+			<p><strong>Faça seu cadastro na Haishop.</strong></p>
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
