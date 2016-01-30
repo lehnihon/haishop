@@ -2289,12 +2289,6 @@ h1.page-title {
 .woocommerce-page input.button.alt {
 	background-color: #005176;
 	*background-color: #005176;
-	background-image: -ms-linear-gradient(top, #0072a6, #005176);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0072a6), to(#005176));
-	background-image: -webkit-linear-gradient(top, #0072a6, #005176);
-	background-image: -o-linear-gradient(top, #0072a6, #005176);
-	background-image: linear-gradient(top, #0072a6, #005176);
-	background-image: -moz-linear-gradient(top, #0072a6, #005176);
 	border: 1px solid #005176;
 	*border: 0;
 	border-color: rgba(0, 81, 118, 0.1) rgba(0, 81, 118, 0.1) rgba(0, 81, 118, 0.25);
@@ -2323,12 +2317,6 @@ h1.page-title {
 	color: #fff;
 	background-color: #208294;
 	*background-color: #208294;
-	background-image: -ms-linear-gradient(top, #2caec5, #208294);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2caec5), to(#208294));
-	background-image: -webkit-linear-gradient(top, #2caec5, #208294);
-	background-image: -o-linear-gradient(top, #2caec5, #208294);
-	background-image: linear-gradient(top, #2caec5, #208294);
-	background-image: -moz-linear-gradient(top, #2caec5, #208294);
 	border: 1px solid #237e8f;
 	*border: 0;
 	border-color: rgba(35, 126, 143, 0.1) rgba(35, 126, 143, 0.1) rgba(35, 126, 143, 0.25);
@@ -2458,6 +2446,11 @@ div.woo-produtos-menu div.filtro .widget_price_filter{
 
 div.products .product{
 	margin-bottom: 25px;
+}
+
+div.woocommerce div#customer_login{
+	background-color: #f5f5f5;
+	padding:50px 0;
 }
 
 /* ==========================================================================
