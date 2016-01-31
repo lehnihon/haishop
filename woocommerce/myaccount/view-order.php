@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-
+<div id="myacount-format">
 <?php wc_print_notices(); ?>
 
 <p class="order-info"><?php printf( __( 'Order #<mark class="order-number">%s</mark> was placed on <mark class="order-date">%s</mark> and is currently <mark class="order-status">%s</mark>.', 'woocommerce' ), $order->get_order_number(), date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ), wc_get_order_status_name( $order->get_status() ) ); ?></p>
@@ -42,3 +42,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 endif;
 
 do_action( 'woocommerce_view_order', $order_id );
+?>
+</div>

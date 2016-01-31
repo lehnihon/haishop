@@ -20,7 +20,7 @@ get_currentuserinfo();
 ?>
 
 <?php wc_print_notices(); ?>
-
+<div id="myacount-format">
 <?php if ( ! $load_address ) : ?>
 
 	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
@@ -29,7 +29,7 @@ get_currentuserinfo();
 
 	<form method="post">
 
-		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title ); ?></h3>
+		<h3 class="adress-edit"><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title ); ?></h3>
 
 		<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
 
@@ -50,3 +50,4 @@ get_currentuserinfo();
 	</form>
 
 <?php endif; ?>
+</div>

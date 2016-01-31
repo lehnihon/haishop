@@ -2488,6 +2488,65 @@ div.woocommerce .cart-collaterals .cart_totals .checkout-button, div.woocommerce
 	padding: 8px 5px;
 }
 
+div.woocommerce .woocommerce-billing-fields h3{
+	color: #f21b2d;
+	text-align: left;
+}
+
+div.woocommerce #ship-to-different-address{
+	color: #005176;
+}
+
+div.woocommerce #order_review_heading{
+	color: #005176;
+	text-align: left;
+}
+
+div.woocommerce h2.recent-order-title{
+	font-size:20px;
+	color: #005176;
+	margin-top: 50px;
+
+}
+
+div.woocommerce h3.recent-order-title{
+	font-size:20px;
+	color: #005176;
+	padding:0 !important;
+	float: left;
+	margin-right: 10px;
+	font-weight: normal;
+}
+
+div.woocommerce .acount-title-adress{
+	margin-top: 50px;
+	text-align: left;
+}
+
+div.woocommerce div#myacount-format{
+	background-color: #f5f5f5;
+	padding:50px;	
+}
+
+div.woocommerce div#myacount-format h1{
+	color: #f21b2d;
+	font-size: 26px;
+	text-align: left;
+}
+
+div.woocommerce div#myacount-format h3.adress-edit{
+	color: #f21b2d;
+	font-size: 26px;
+	text-align: left;
+	font-weight: normal;
+}
+
+div.woocommerce div#myacount-format h2,div.woocommerce div#myacount-format h3{
+	font-size:20px;
+	color: #005176;	
+	font-weight: normal;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

@@ -13,6 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 wc_print_notices(); ?>
 
+<div id="myacount-format">
+<h1>Minha Conta</h1>
 <p class="myaccount_user">
 	<?php
 	printf(
@@ -36,3 +38,4 @@ wc_print_notices(); ?>
 <?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php do_action( 'woocommerce_after_my_account' ); ?>
+</div>
