@@ -2449,6 +2449,11 @@ div.products .product{
 	margin-bottom: 25px;
 }
 
+div.products .product h3{
+	min-height: 123px;
+}
+
+
 div.woocommerce div#customer_login{
 	background-color: #f5f5f5;
 	padding:25px;
