@@ -95,6 +95,16 @@ get_header( 'shop' ); ?>
 					</div>
 				<?php endif; ?>
 
+				<?php if($cat_obj->slug == 'bar-pro'):?>
+					<div class="filtro">
+						<div class="titulo-filtro">
+							<span>Tipo</span> <img class="e-claro img-plus" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/plus.jpg"; ?>"/>
+						</div>
+						<?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-12"]'); ?>
+					</div>
+				<?php endif; ?>
+
+
 				<?php if($cat_obj->slug == 'instrumentacao'):?>
 					<div class="filtro">
 						<div class="titulo-filtro">
