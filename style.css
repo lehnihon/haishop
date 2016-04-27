@@ -650,6 +650,13 @@ select {
 }
 
 
+#wc-correios-simulator #zipcode{
+	padding:20px !important;
+	margin-right: 0px !important;
+}
+
+
+
 /* ==========================================================================
    Site specific styles
    ========================================================================== */

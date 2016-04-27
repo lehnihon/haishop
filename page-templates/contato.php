@@ -20,7 +20,7 @@ get_header(); ?>
 		</div>
 		<div class="row">
 			<div class="col grid_6_of_12">
-				<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 8 ); } ?>
+				<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 7 ); } ?>
 
 			</div> <!-- /.col.grid_6_of_12 -->
 			<div class="col grid_6_of_12">

@@ -40,10 +40,10 @@ get_header( 'shop' ); ?>
 			</div>
 		</div>
 		<div class="products row" style="text-align:center; margin:0">
-			<h4>Produtos para simplificar sua vida</h4>
+			<h4>Bar Pró</h4>
 		    <?php
 
-		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'bar-pro', 'orderby' => 'rand' );
 		        $loop = new WP_Query( $args );
 
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
@@ -93,10 +93,10 @@ get_header( 'shop' ); ?>
 			</div>
 		</div>
 		<div class="products row" style="text-align:center; margin:0">
-			<h4>Produtos para simplificar sua vida</h4>
+			<h4>Casa</h4>
 		    <?php
 
-		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'casa', 'orderby' => 'rand' );
 		        $loop = new WP_Query( $args );
 
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
@@ -150,10 +150,10 @@ get_header( 'shop' ); ?>
 			</div>
 		</div>
 		<div class="products row" style="text-align:center; margin:0">
-			<h4>Produtos para simplificar sua vida</h4>
+			<h4>Chaves</h4>
 		    <?php
 
-		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'chaves', 'orderby' => 'rand' );
 		        $loop = new WP_Query( $args );
 
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
@@ -202,10 +202,10 @@ get_header( 'shop' ); ?>
 			</div>
 		</div>
 		<div class="products row" style="text-align:center; margin:0">
-			<h4>Produtos para simplificar sua vida</h4>
+			<h4>Instrumentação</h4>
 		    <?php
 
-		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'instrumentacao', 'orderby' => 'rand' );
 		        $loop = new WP_Query( $args );
 
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
