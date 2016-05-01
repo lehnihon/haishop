@@ -2419,7 +2419,16 @@ div.woo-produtos-menu div.titulo{
 	font-size: 18px;
 	padding:10px 20px;
 	text-align: left;
+	margin-bottom: 10px;
 
+}
+
+div.woo-produtos-menu .count::before{
+	content: "(";
+}
+
+div.woo-produtos-menu .count::after{
+	content: ")";
 }
 
 div.woo-produtos-menu div.filtro{
@@ -2433,6 +2442,7 @@ div.woo-produtos-menu div.filtro div.titulo-filtro{
 	padding-bottom:10px;
 	padding-left:25px;
 	padding-right:10px;
+	font-weight: bold;
 }
 
 div.woo-produtos-menu div.filtro div.titulo-filtro img.img-plus{
