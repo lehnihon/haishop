@@ -59,8 +59,8 @@
 						<li class="facebook"><a target="_blank" href="#"></a></li>
 					</ul>	
 				</div>
-			</footer> <!-- /.site-footer.row -->
-			<footer class="row" style="border-top:2px solid #E8E8E8; padding:10px 0; ">
+			</footer> <!-- /.site-footer.row --> <br> <br>
+			<footer class="row" style="border-top:2px solid #E8E8E8; padding:25px 0; ">
 				<div class="col grid_6_of_12">
 					<h5>Formas de Pagamento</h5>
 					<img class="efeito-cinza" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/formas_pgto.jpg"; ?>" alt="" />
@@ -69,6 +69,7 @@
 					<h5>Televendas</h5>
 					<p>
 						11 2296-3412
+						contato@haishop.com.br
 					</p>
 				</div>
 			</footer>
@@ -81,7 +82,7 @@
 	</div> <!-- /.footercontainer -->
 	<div id="copyrightcontainer">
 		<p>
-			© Copyright 2015 - Haishop
+			© Copyright 2015 - Haishop - CNPJ 07.898.886/0001-81 - Vila Carrão - São Paulo
 		</p>
 	</div>
 </div> <!-- /.#wrapper.hfeed.site -->

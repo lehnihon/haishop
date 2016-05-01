@@ -60,7 +60,10 @@ get_header( 'shop' ); ?>
 		        		?>
 
 		                <div <?php post_class( $classes ); ?>>    
-		                	<h3><?php the_title(); ?></h3>
+		                	<h3><?php if (strlen($post->post_title) > 60) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+							the_title();
+							} ?></h3>
 		                    <a  class="bw" href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 		                    	
 		                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
@@ -113,7 +116,10 @@ get_header( 'shop' ); ?>
 		        		?>
 
 		                <div <?php post_class( $classes ); ?>>    
-		                	<h3><?php the_title(); ?></h3>
+		                	<h3><?php if (strlen($post->post_title) > 60) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+							the_title();
+							} ?></h3>
 		                    <a  class="bw" href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 		                    	
 		                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
@@ -170,7 +176,10 @@ get_header( 'shop' ); ?>
 		        		?>
 
 		                <div <?php post_class( $classes ); ?>>    
-		                	<h3><?php the_title(); ?></h3>
+		                	<h3><?php if (strlen($post->post_title) > 60) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+							the_title();
+							} ?></h3>
 		                    <a  class="bw" href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 		                    	
 		                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
@@ -222,7 +231,10 @@ get_header( 'shop' ); ?>
 		        		?>
 
 		                <div <?php post_class( $classes ); ?>>    
-		                	<h3><?php the_title(); ?></h3>
+		                	<h3><?php if (strlen($post->post_title) > 60) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+							the_title();
+							} ?></h3>
 		                    <a  class="bw" href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 		                    	
 		                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
