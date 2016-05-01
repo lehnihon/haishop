@@ -20,25 +20,24 @@
 				<div class="col grid_2_of_12">
 					<h5>Departamentos</h5>
 					<ul>
-						<li><a href="#">Bóia Elétrica</a></li>
-						<li><a href="#">Chaves</a></li>
-						<li><a href="#">Chaves Botão Caça</a></li>
-						<li><a href="#">Coluna de Instrumentos</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/boia-eletrica'; ?>">Bóia Elétrica</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/chaves'; ?>">Chaves</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/chave-botao-caca'; ?>">Chaves Botão Caça</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/coluna-de-instrumentos'; ?>">Coluna de Instrumentos</a></li>
 					</ul>
 				</div>		
 				<div class="col grid_2_of_12"><br/>
 					<ul>
-						<li><a href="#">Instrumentação Automotiva</a></li>
-						<li><a href="#">Painel Automotivo</a></li>
-						<li><a href="#">Cronomac</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/instrumentacao'; ?>">Instrumentação Automotiva</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/painel'; ?>">Painel Automotivo</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/Marcas'; ?>">Marcas</a></li>
 					</ul>
 				</div>
 				<div class="col grid_2_of_12"><br/>
 					<ul>
-						<li><a href="#">Race Tronix</a></li>
-						<li><a href="#">Willtec</a></li>
-						<li><a href="#">Bebês</a></li>
-						<li><a href="#">Casa</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/bebes'; ?>">Bebês</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/casa'; ?>">Casa</a></li>
+						<li><a href="<?php echo home_url( '/' ).'categoria-produto/bar-pro'; ?>">Bar pró</a></li>
 					</ul>
 				</div>
 				<div class="col grid_2_of_12">
@@ -68,7 +67,7 @@
 				<div class="col grid_6_of_12">
 					<h5>Televendas</h5>
 					<p>
-						11 2296-3412
+						11 2296-3412 <br>
 						contato@haishop.com.br
 					</p>
 				</div>
@@ -81,9 +80,18 @@
 		</div>
 	</div> <!-- /.footercontainer -->
 	<div id="copyrightcontainer">
-		<p>
-			© Copyright 2015 - Haishop - CNPJ 07.898.886/0001-81 - Vila Carrão - São Paulo
-		</p>
+		<div class="site-content">
+			<div class="row">
+				<div class="col grid_10_of_12" style="text-align:center">
+					<p>
+					© Copyright 2015 - Haishop - CNPJ 07.898.886/0001-81 - Vila Carrão - São Paulo 
+					</p>
+				</div>
+				<div class="col grid_2_of_12">
+					<a target="_blank" href="http://agenciarino.com.br/"><img class="anima-rino" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/logo-rino.jpg"?>" /></a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div> <!-- /.#wrapper.hfeed.site -->
 
