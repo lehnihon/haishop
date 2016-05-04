@@ -54,6 +54,22 @@ td { vertical-align: top; }
 	color: #f21b2d;
 }
 
+.btn-enviar{
+	background-color: #d02130 !important;
+	color:white !important;
+	border: 0 !important;
+	padding: 10px 25px;
+}
+
+.input-contato{
+	border: 0 !important;
+	background-color: #f0f2f4 !important;
+}
+
+.btn-enviar:hover{
+	background-color: #E78D95 !important;
+}
+
 body { 
 	margin: 0 auto;
 	padding: 0;
@@ -479,40 +495,7 @@ input[type="button"] {
 input[type="submit"] {
 	display: inline-block;
 	*display: inline;
-	padding: 8px 14px;
-	padding: 0.5rem 0.875rem;
-	margin-bottom: 0;
-	*margin-left: .3em;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.25;
-	color: #333333;
-	text-align: center;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	vertical-align: middle;
-	cursor: pointer;
-	background-color: #f5f5f5;
-	*background-color: #e6e6e6;
-	background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-	background-repeat: repeat-x;
-	border: 1px solid #cccccc;
-	*border: 0;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-	border-bottom-color: #b3b3b3;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6');
-	*zoom: 1;
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	
 }
 
 .menu-toggle, a.btn {
