@@ -253,7 +253,9 @@ get_header( 'shop' ); ?>
 		    <?php endwhile; ?>
 		    <?php wp_reset_query(); ?>
 		</div><!--/.products-->
+
 		<?php get_template_part( 'newsletter' ); ?>
+		
 	</div> <!-- /#primary.site-content.row -->
 
 <?php get_footer(); ?>
