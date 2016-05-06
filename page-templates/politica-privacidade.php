@@ -42,6 +42,7 @@ get_header(); ?>
 					que esses dados sejam protegidos contra a interceptação, mau uso ou 
 					adulteração. 
 				</p>
+			</div>
 			<div class="col grid_6_of_12">
 				<p style="margin-bottom: 10px">
 					Diante disso, para garantir essa segurança aos dados dos clientes HaiShop,
@@ -66,7 +67,7 @@ get_header(); ?>
 				</p>
 		
 			</div> <!-- /.col.grid_6_of_12 -->
-		</div>
+		</div> <br>
 
 		<?php get_template_part( 'newsletter' ); ?>
 		

@@ -43,9 +43,9 @@
 				<div class="col grid_2_of_12">
 					<h5>Sobre a Haishop</h5>
 					<ul>
-						<li><a href="#">Institucional</a></li>
-						<li><a href="#">Política de Privacidade</a></li>
-						<li><a href="#">Troca e Devolução</a></li>
+						<li><a href="<?php echo home_url( '/' ).'sobre'; ?>">Institucional</a></li>
+						<li><a href="<?php echo home_url( '/' ).'politica-de-privacidade'; ?>">Política de Privacidade</a></li>
+						<li><a href="<?php echo home_url( '/' ).'troca-devolucao'; ?>">Troca e Devolução</a></li>
 						<li><a href="<?php echo esc_url( home_url( '/' ))."/contato/"; ?>">Fale Conosco</a></li>
 					</ul>
 				</div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: politica de privacidade
+ * Template Name: troca devolucao
  *
  * Description: Displays a full-width page, with no sidebar. This template is great for pages
  * containing large amounts of content.
@@ -157,7 +157,7 @@ get_header(); ?>
 					<strong>Jurídico HaiShop</strong> 
 				</p>	
 			</div>
-		</div>
+		</div><br>
 
 		<?php get_template_part( 'newsletter' ); ?>
 		

@@ -100,7 +100,7 @@ get_header(); ?>
 					100% de satisfação.
 				 </p>
 			</div> <!-- /.col.grid_6_of_12 -->
-		</div>
+		</div> <br>
 
 		<?php get_template_part( 'newsletter' ); ?>
 		

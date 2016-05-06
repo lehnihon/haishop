@@ -41,9 +41,8 @@ get_header(); ?>
 					</p>
 				</div>
 			</div> <!-- /.col.grid_6_of_12 -->
-		</div>
+		</div><br>
 
-		<?php get_template_part( 'newsletter' ); ?>
 	</div><!-- /#primary.site-content.row -->
 
 <?php get_footer(); ?>
