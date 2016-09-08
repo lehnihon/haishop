@@ -31,8 +31,28 @@
 		</header> <!-- /.entry-header -->
 
 		<?php if ( is_search() ) { // Only display Excerpts for Search ?>
+		<div style="float:left; width: 20%">
+			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( esc_html__( 'Permalink to %s', 'quark' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+				<?php the_post_thumbnail( 'post_feature_full_width' ); ?>
+			</a>
+		</div>
+		
 			<div class="entry-summary">
 				<?php the_excerpt(); ?>
+				<?
+				global $product;
+
+				?>
+				<br/>
+				<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+					<span style="color:#005176; font-weight:bold">Preço</span>
+					<p class="price"><?php echo $product->get_price_html(); ?></p>
+
+					<meta itemprop="price" content="<?php echo $product->get_price(); ?>" />
+					<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
+					<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
+
+				</div>
 			</div> <!-- /.entry-summary -->
 		<?php }
 		else { ?>
@@ -49,5 +69,5 @@
 			</div> <!-- /.entry-content -->
 		<?php } ?>
 
-	
+	<div style="clear:both"></div>
 	</article> <!-- /#post -->
