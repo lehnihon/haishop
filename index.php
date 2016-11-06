@@ -39,7 +39,7 @@ get_header( 'shop' ); ?>
 				?>
 			</div>
 		</div>
-		<div class="products row" style="text-align:center; margin:0">
+		<div class="products row" style="text-align:center; margin-bottom:20px">
 			<h4>Produtos para simplificar sua vida</h4>
 		    <?php
 
@@ -92,7 +92,7 @@ get_header( 'shop' ); ?>
 				?>
 			</div>
 		</div>
-		<div class="products row" style="text-align:center; margin:0">
+		<div class="products row" style="text-align:center; margin-bottom:20px">
 			<h4>Produtos para simplificar sua vida</h4>
 		    <?php
 
@@ -149,7 +149,7 @@ get_header( 'shop' ); ?>
 				?>
 			</div>
 		</div>
-		<div class="products row" style="text-align:center; margin:0">
+		<div class="products row" style="text-align:center; margin-bottom:20px">
 			<h4>Produtos para simplificar sua vida</h4>
 		    <?php
 
@@ -201,7 +201,7 @@ get_header( 'shop' ); ?>
 				?>
 			</div>
 		</div>
-		<div class="products row" style="text-align:center; margin:0">
+		<div class="products row" style="text-align:center; margin-bottom:20px">
 			<h4>Produtos para simplificar sua vida</h4>
 		    <?php
 
