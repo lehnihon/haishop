@@ -43,9 +43,15 @@
 		<div class="site-header row">
 			<div class="col grid_12_of_12">
 				<ul class="redes_sociais_header">
+<<<<<<< HEAD
 					<li><a href="<?php echo esc_url( home_url( '/' ) )."sobre"; ?>">Sobre a Hai Shop</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) )."minha-conta"; ?>">Login / Cadastro</a></li>
 					<li><a href="<?php echo esc_url( home_url( '/' ) )."contato"; ?>">Atendimento</a></li>
+=======
+					<li><a href="<?php echo home_url( '/' ).'sobre'; ?>">Sobre a Hai Shop</a></li>
+					<li><a href="<?php echo home_url( '/' ).'minha-conta'; ?>">Login / Cadastre-se</a></li>
+					<li><a  href="<?php echo home_url( '/' ).'contato'; ?>">Atendimento</a></li>
+>>>>>>> 388b19bbb90fd01294e4b3715703372ba90c07fa
 				</ul>
 			</div>
 		</div>

@@ -21,7 +21,7 @@ if ( empty( $woocommerce_loop['loop'] ) )
 
 // Store column count for displaying the grid
 if ( empty( $woocommerce_loop['columns'] ) )
-	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
+	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 3 );
 
 // Ensure visibility
 if ( ! $product || ! $product->is_visible() )
@@ -35,7 +35,7 @@ $classes = array();
 if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] )
 	echo '<div class="row">';
 
-$classes[] = 'col grid_3_of_12';
+$classes[] = 'col grid_4_of_12';
 ?>
 
 <div <?php post_class( $classes ); ?>>
@@ -43,7 +43,10 @@ $classes[] = 'col grid_3_of_12';
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
 	<a class="bw" href="<?php the_permalink(); ?>">
-		<h3><?php the_title(); ?></h3>
+		<h3><?php if (strlen($post->post_title) > 60) {
+echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+the_title();
+} ?></h3>
 		<?php
 			/**
 			 * woocommerce_before_shop_loop_item_title hook

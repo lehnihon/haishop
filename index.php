@@ -39,11 +39,16 @@ get_header( 'shop' ); ?>
 				?>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="products row" style="text-align:center; margin-bottom:20px">
 			<h4>Produtos para simplificar sua vida</h4>
+=======
+		<div class="products row" style="text-align:center; margin:0">
+			<h4>Bar Pró</h4>
+>>>>>>> 388b19bbb90fd01294e4b3715703372ba90c07fa
 		    <?php
 
-		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'bar-pro', 'orderby' => 'rand' );
 		        $loop = new WP_Query( $args );
 
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
@@ -60,7 +65,10 @@ get_header( 'shop' ); ?>
 		        		?>
 
 		                <div <?php post_class( $classes ); ?>>    
-		                	<h3><?php the_title(); ?></h3>
+		                	<h3><?php if (strlen($post->post_title) > 60) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+							the_title();
+							} ?></h3>
 		                    <a  class="bw" href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 		                    	
 		                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
@@ -92,11 +100,16 @@ get_header( 'shop' ); ?>
 				?>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="products row" style="text-align:center; margin-bottom:20px">
 			<h4>Produtos para simplificar sua vida</h4>
+=======
+		<div class="products row" style="text-align:center; margin:0">
+			<h4>Casa</h4>
+>>>>>>> 388b19bbb90fd01294e4b3715703372ba90c07fa
 		    <?php
 
-		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'casa', 'orderby' => 'rand' );
 		        $loop = new WP_Query( $args );
 
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
@@ -113,7 +126,10 @@ get_header( 'shop' ); ?>
 		        		?>
 
 		                <div <?php post_class( $classes ); ?>>    
-		                	<h3><?php the_title(); ?></h3>
+		                	<h3><?php if (strlen($post->post_title) > 60) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+							the_title();
+							} ?></h3>
 		                    <a  class="bw" href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 		                    	
 		                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
@@ -149,11 +165,16 @@ get_header( 'shop' ); ?>
 				?>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="products row" style="text-align:center; margin-bottom:20px">
 			<h4>Produtos para simplificar sua vida</h4>
+=======
+		<div class="products row" style="text-align:center; margin:0">
+			<h4>Chaves</h4>
+>>>>>>> 388b19bbb90fd01294e4b3715703372ba90c07fa
 		    <?php
 
-		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'chaves', 'orderby' => 'rand' );
 		        $loop = new WP_Query( $args );
 
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
@@ -170,7 +191,10 @@ get_header( 'shop' ); ?>
 		        		?>
 
 		                <div <?php post_class( $classes ); ?>>    
-		                	<h3><?php the_title(); ?></h3>
+		                	<h3><?php if (strlen($post->post_title) > 60) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+							the_title();
+							} ?></h3>
 		                    <a  class="bw" href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 		                    	
 		                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
@@ -201,11 +225,16 @@ get_header( 'shop' ); ?>
 				?>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="products row" style="text-align:center; margin-bottom:20px">
 			<h4>Produtos para simplificar sua vida</h4>
+=======
+		<div class="products row" style="text-align:center; margin:0">
+			<h4>Instrumentação</h4>
+>>>>>>> 388b19bbb90fd01294e4b3715703372ba90c07fa
 		    <?php
 
-		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'categoria', 'orderby' => 'rand' );
+		        $args = array( 'post_type' => 'product', 'posts_per_page' => 4, 'product_cat' => 'instrumentacao', 'orderby' => 'rand' );
 		        $loop = new WP_Query( $args );
 
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product, $woocommerce_loop; ?>
@@ -222,7 +251,10 @@ get_header( 'shop' ); ?>
 		        		?>
 
 		                <div <?php post_class( $classes ); ?>>    
-		                	<h3><?php the_title(); ?></h3>
+		                	<h3><?php if (strlen($post->post_title) > 60) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 60) . '...'; } else {
+							the_title();
+							} ?></h3>
 		                    <a  class="bw" href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 		                    	
 		                        <?php woocommerce_show_product_sale_flash( $post, $product ); ?> 
@@ -241,7 +273,9 @@ get_header( 'shop' ); ?>
 		    <?php endwhile; ?>
 		    <?php wp_reset_query(); ?>
 		</div><!--/.products-->
+
 		<?php get_template_part( 'newsletter' ); ?>
+		
 	</div> <!-- /#primary.site-content.row -->
 
 <?php get_footer(); ?>

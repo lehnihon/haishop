@@ -418,7 +418,8 @@ function quark_scripts_styles() {
 	// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
 	wp_register_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-2.8.3-min.js', array(), '2.8.3', false );
 	wp_enqueue_script( 'modernizr' );
-
+	wp_enqueue_script( 'site-script-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
+	wp_enqueue_script( 'site-script-site', get_template_directory_uri() . '/js/script.js');
 	// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -1164,6 +1165,15 @@ function cs_woocommerce_remove_default_tags( $tabs ) {
 
 	return $tabs;
 }
+
+function annointed_admin_bar_remove() {
+        global $wp_admin_bar;
+
+        /* Remove their stuff */
+        $wp_admin_bar->remove_menu('wp-logo');
+}
+
+add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
 
 add_filter( 'woocommerce_product_tabs', 'cs_woocommerce_remove_default_tags' );
 
